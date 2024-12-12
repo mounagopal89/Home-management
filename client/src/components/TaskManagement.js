@@ -1,28 +1,29 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Task from './Task';
 
 const TaskManagement = () => {
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
+        const fetchTasks = async () => {
+            try {
+                const response = await axios.get('/api/tasks');
+                setTasks(response.data);
+            } catch (error) {
+                console.error('Error fetching tasks:', error);
+            }
+        };
+
         fetchTasks();
     }, []);
-
-    const fetchTasks = async () => {
-        try {
-            const response = await fetch('https://api.example.com/tasks');
-            const data = await response.json();
-            setTasks(data);
-        } catch (error) {
-            console.error('Error fetching tasks:', error);
-        }
-    };
 
     return (
         <div>
             <h1>Task Management</h1>
             <ul>
                 {tasks.map(task => (
-                    <li key={task.id}>{task.name}</li>
+                    <Task key={task.id} task={task} />
                 ))}
             </ul>
         </div>
@@ -30,3 +31,6 @@ const TaskManagement = () => {
 };
 
 export default TaskManagement;
+
+
+            

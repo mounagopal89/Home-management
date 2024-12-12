@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+// import { BrowserRouter } from "react-router-dom";
+import Home from './components/Home';
 import TaskManagement from './components/TaskManagement';
 import ContactsManagement from './components/ContactsManagement';
-import Home from './components/Home';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -23,15 +23,14 @@ function App() {
             </ul>
           </div>
         </nav>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/tasks" component={TaskManagement} />
-          <Route path="/contacts" component={ContactsManagement} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tasks" element={<TaskManagement />} />
+          <Route path="/contacts" element={<ContactsManagement />} />
+        </Routes>
       </div>
     </Router>
   );
 }
 
 export default App;
-
