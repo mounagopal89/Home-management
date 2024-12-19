@@ -1,0 +1,57 @@
+.slides {
+  display: flex;
+  flex-direction: row; /* Display slides horizontally */
+  gap: 20px;
+  padding: 20px;
+  overflow-x: auto; /* Add horizontal scrolling if needed */
+}
+
+.slide {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 300px; /* Set a minimum width for each slide */
+  flex: 0 0 auto; /* Prevent slides from shrinking */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.slide h2 {
+  margin-top: 0;
+}
+
+.slide p {
+  margin-bottom: 0;
+}
+
+.slide:hover {
+  transform: translateY(-10px); /* Lift up the slide */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Add a deeper shadow */
+  border: 4px solid #15864d; /* Add a thicker border on hover */
+}
+
+.home-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%; /* Adjust as needed */
+  max-width: 400px; /* Set a maximum width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.fam-conts-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  max-width: 400px;
+  height: auto;
+}
+
+.slide-link {
+  text-decoration: none; /* Remove underline from link */
+}
+
+.slide-link .slide {
+  cursor: pointer; /* Change cursor to pointer */
+}

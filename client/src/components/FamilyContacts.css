@@ -1,0 +1,94 @@
+.family-contacts-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #15864d;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0f5c33;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.contact-table th,
+.contact-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.contact-table th {
+  background-color: #15864d;
+  color: #ffffff;
+}
+
+.contact-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.contact-table tr:hover {
+  background-color: #ddd;
+}
+
+.contact-table button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: #15864d;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.contact-table button:hover {
+  background-color: #0f5c33;
+}
